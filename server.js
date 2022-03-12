@@ -23,6 +23,11 @@ app.use(methodOverride("_method"));
 app.use(express.static("public"));
 
 //Routes
+// app.use('/journals', journalController)
+// app.get('/', (req, res) => {
+//     res.send("will this be the home page");
+// })
+
 app.use('/journals', journalController)
 app.get('/', (req, res) => {
     res.send("will this be the home page");
