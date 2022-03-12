@@ -1,5 +1,4 @@
 const React = require('react');
-const DefaultLayout = require('../Default.jsx');
 
 class New extends React.Component {
     render() {
@@ -30,7 +29,7 @@ class New extends React.Component {
 
                         {/* <label> READY TO EAT:<input type="checkbox" name="readyToEat" /> </label> */}
                     </fieldset>
-                    <input type="submit" value="create New fruit" />
+                    <input type="submit" value="Create New Journal Entry" />
                 </form>
         )
     }
