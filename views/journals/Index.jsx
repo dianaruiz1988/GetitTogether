@@ -16,7 +16,7 @@ class Index extends React.Component {
                             <div class="Header Menu">
                                 <div class="Container">
                                     <div class="Header Wrap">
-                                        <a href="/fruits/new"><button>Create A New Fruit</button></a>
+                                        <a href="/fruits/new"><button>Create A New Journal Entry</button></a>
                                         <nav class="navigation">
                                             <ul class="Header Nav List"></ul>
                                         </nav>
