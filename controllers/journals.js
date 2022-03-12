@@ -68,12 +68,51 @@ router.get('/new', (req, res) => {
 })
 
 //DELETE++++++++++++++++++++
-
+router.delete ('/:id',(req,res) => {
+    const {id} = req.params;
+    Journal.findByIdAndDelete(id)
+        .then(() => {
+            res.redirect('/journals')
+        })
+        .catch((error) => {
+            res.status(400).json({error});
+        })
+})
 //UPDATE+++++++++++++++++++++++++++++++++++++++++++++++++
+router.put('/:id', (req, res) => {
+    const id = req.params.id;
+    req.body.brushTeeth = req.body.brushTeeth === 'on' ? true : false;
+    req.body.washFace = req.body.washFace === 'on' ? true : false;
+    req.body.eatMeal = req.body.eatMeal === 'on' ? true : false;
+    req.body.getFreshAir = req.body.getFreshAir === 'on' ? true : false;
+    req.body.drinkWater = req.body.drinkWater === 'on' ? true : false;
 
+    Journal.findByIdAndUpdate(id, req.body, { new: true})
+        .then(() => {
+            res.redirect(`/journals/${id}`)
+        })
+        .catch((error) => {
+            res.status(400).json({error})
+        })
+})
 //CREATE++++++++++++++++++++++++++++++++++++++++++++++++
+router.post('/', (req, res) => {
+    req.body.brushTeeth = req.body.brushTeeth === 'on' ? true : false;
+    req.body.washFace = req.body.washFace === 'on' ? true : false;
+    req.body.eatMeal = req.body.eatMeal === 'on' ? true : false;
+    req.body.getFreshAir = req.body.getFreshAir === 'on' ? true : false;
+    req.body.drinkWater = req.body.drinkWater === 'on' ? true : false;
 
+    Journal.create(req.body)
+        .then((createdJournal) => {
+            res.redirect(`/journals/${createdJournal._id}`)
+        })
+        .catch((error) => {
+            res.status(400).json({error})
+        })
+})
 //EDIT+++++++++++++++++++++++++++++++++
+router.get('/:id/edit')
 
 //SHOW+++++++++++++++++++++++++++++
 

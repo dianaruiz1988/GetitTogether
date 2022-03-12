@@ -1,4 +1,5 @@
 const React = require('react');
+<link rel="stylesheet" href="/css/base.css" />
 
 class Index extends React.Component {
     render() {
