@@ -4,7 +4,7 @@ class New extends React.Component {
     render() {
         return (
                 <form action="/journals" method="post">
-                    <fieldset>
+                    {/* <fieldset> */}
                         <legend>Create a New Journal Entry</legend>
                         <label>
                             DATE:<input type="text" name="date" placeholder="enter date in this format month/day/year" /><br />
@@ -28,7 +28,7 @@ class New extends React.Component {
 
 
                         {/* <label> READY TO EAT:<input type="checkbox" name="readyToEat" /> </label> */}
-                    </fieldset>
+                    {/* </fieldset> */}
                     <input type="submit" value="Create New Journal Entry" />
                 </form>
         )
