@@ -29,7 +29,7 @@ class Index extends React.Component {
                             <article>
                                 <a href={`/journals/${journal._id}`}>
                                     <h2>
-                                        {journal.name} - {journal.title}
+                                        {journal.date} - {journal.title}
                                     </h2>
                                 </a>
                             </article>
