@@ -4,7 +4,6 @@ const DefaultLayout = require('../Default.jsx');
 class New extends React.Component {
     render() {
         return (
-            <DefaultLayout>
                 <form action="/journals" method="post">
                     <fieldset>
                         <legend>Create a New Journal Entry</legend>
@@ -18,7 +17,6 @@ class New extends React.Component {
                     </fieldset>
                     <input type="submit" value="create New fruit" />
                 </form>
-            </DefaultLayout>
         )
     }
 }
