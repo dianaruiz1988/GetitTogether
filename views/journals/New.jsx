@@ -8,12 +8,27 @@ class New extends React.Component {
                     <fieldset>
                         <legend>Create a New Journal Entry</legend>
                         <label>
-                            NAME:<input type="text" name="name" placeholder="enter fruit name" />
+                            DATE:<input type="text" name="date" placeholder="enter date in this format month/day/year" />
                         </label>
                         <label>
-                            COLOR:<input type="text" name="color" placeholder="enter fruit color" />
+                            TITLE:<input type="text" name="title" placeholder="enter a title for your journal entry" />
                         </label>
-                        <label> READY TO EAT:<input type="checkbox" name="readyToEat" /> </label>
+                        <label>
+                            I AM GRATEFUL FOR:<input type="textarea" textarea name="grateful" placeholder="enter a title for your journal entry" />
+                        </label>
+                      
+
+
+
+
+
+
+
+
+
+
+
+                        {/* <label> READY TO EAT:<input type="checkbox" name="readyToEat" /> </label> */}
                     </fieldset>
                     <input type="submit" value="create New fruit" />
                 </form>
