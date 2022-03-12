@@ -2,7 +2,7 @@ const React = require('react');
 
 class DefaultLayout extends React.Component {
     render() {
-        const { fruits } = this.props;
+        const { journals } = this.props;
         return (
             <html lang="en">
                 <head>
@@ -39,7 +39,7 @@ class DefaultLayout extends React.Component {
                                 <div class="Header Menu">
                                     <div class="Container">
                                         <div class="Header Wrap">
-                                            <a href="/fruits/new"><button>Create A New Fruit</button></a>
+                                            <a href="/journals/new"><button>Create A New Journal Entry</button></a>
                                             <nav class="navigation">
                                                 <ul class="Header Nav List"></ul>
                                             </nav>
