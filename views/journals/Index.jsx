@@ -1,8 +1,8 @@
 const React = require('react');
-<link rel="stylesheet" href="/css/base.css" />
 
 class Index extends React.Component {
     render() {
+        <link rel="stylesheet" href="/css/base.css" />
         const { journals } = this.props;
         return (
           
