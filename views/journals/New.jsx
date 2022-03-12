@@ -4,17 +4,18 @@ class New extends React.Component {
     render() {
         return (
                 <form action="/journals" method="post">
-                    {/* <fieldset> */}
+                    <fieldset>
                         <legend>Create a New Journal Entry</legend>
-                        <label>
-                            DATE:<input type="text" name="date" placeholder="enter date in this format month/day/year" /><br />
-                        </label>
-                        <label>
-                            TITLE:<input type="text" name="title" placeholder="enter a title for your journal entry" /><br />
-                        </label>
-                        <label>
-                            I AM GRATEFUL FOR:<input type="textarea" textarea name="grateful" placeholder="write what you are grateful for here" /><br />
-                        </label>
+                        
+                        DATE: <input name="date"  type="text"  placeholder="enter date like this month/day/year" /><br />
+                        TITLE: <input name="title"  type="text"  placeholder="enter date like this month/day/year" /><br />
+                        I AM GRATEFUL FOR: <br /><textarea name="grateful" type="textarea" /><br />
+                        DAILY AFFIRMATION: <br /><textarea name="affirmations" type="textarea" /><br />
+                        TODAY: <br /><textarea name="brushTeeth" type="textarea" /><br />
+
+
+                        BRUSH TEETH:<input name="shipIsBroken" type="checkbox" /><br />
+                    
                       
 
 
@@ -27,8 +28,8 @@ class New extends React.Component {
 
 
 
-                        {/* <label> READY TO EAT:<input type="checkbox" name="readyToEat" /> </label> */}
-                    {/* </fieldset> */}
+                    
+                    </fieldset>
                     <input type="submit" value="Create New Journal Entry" />
                 </form>
         )
