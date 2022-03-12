@@ -7,7 +7,6 @@ class DefaultLayout extends React.Component {
             <html lang="en">
                 <head>
                     <meta charSet='UTF-8' />
-                    {/* <link rel="stylesheet" href="/css/style.css" charset="utf-8"></link> */}
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
                     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"></link>
                     <meta httpEqiv="X-UA-Compatbile" content="IE=edge" />
@@ -19,28 +18,6 @@ class DefaultLayout extends React.Component {
                         crossOrigin="anonymous"
                     ></script>
                 </head>
-                {/* <body>
-                    <div id="main">
-                        <div>
-                            <header class="header style">
-                                <div class="Header Logo wrap">
-                                    <a class="Header Logo" href="">Get it Together</a>
-                                </div>
-
-                                <div class="Header Menu">
-                                    <div class="Container">
-                                        <div class="Header Wrap">
-                                            <a href="/journals/new"><button>Create A New Journal Entry</button></a>
-                                            <nav class="navigation">
-                                                <ul class="Header Nav List"></ul>
-                                            </nav>
-                                        </div>
-                                    </div>
-                                </div>
-                            </header>
-                        </div>
-                    </div>
-                </body> */}
 
             </html>
         )
