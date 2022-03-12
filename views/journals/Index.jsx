@@ -1,11 +1,10 @@
 const React = require('react');
-const DefaultLayout = require('../Default.jsx')
 
 class Index extends React.Component {
     render() {
         const { journals } = this.props;
         return (
-            <DefaultLayout>
+          
                 <div id="main">
                     <div>
                         <header class="header style">
@@ -27,8 +26,6 @@ class Index extends React.Component {
                     </div>
                 </div>
 
-
-            </DefaultLayout>
         )
     }
 }
