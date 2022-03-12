@@ -4,6 +4,7 @@ const { Schema, model } = mongoose;
 
 const journalsSchema = new Schema({
     date: String,
+    title: String,
     grateful: String,
     affirmations: String,
     today: String,

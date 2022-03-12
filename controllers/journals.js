@@ -1,18 +1,20 @@
 
-// IMPORTING FILES & PACKAGES====================================================================================================================
+// IMPORTING FILES & PACKAGES=======================================================================================================
 const express = require('express');
+const res = require('express/lib/response');
 const Journal = require("../models/journal");
 
 // CREATE ROUTER====================================================================================================================
 const router = express.Router();
 
-//ROUTES:===========================================================================
+//ROUTES:===========================================================================================================================
 
 //SEED++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 router.get('/seed', (req, res) => {
     const startJournals = [
         {
             date: "3/11/22",
+            title: "First Journal Entry",
             grateful: "grateful for family",
             affirmations: " I will do good on this project",
             today: "today I am grateful for opportunies heading my way",
@@ -25,6 +27,7 @@ router.get('/seed', (req, res) => {
         },
         {
             date: "3/12/22",
+            title: "Second Journal Entry",
             grateful: "grateful for health",
             affirmations: " I will believe in myself",
             today: "today I am grateful for being able to work on the project",
@@ -45,11 +48,19 @@ router.get('/seed', (req, res) => {
     })
 })
 
-
-
 //INDUCES===========================================================================
 
 //INDEX+++++++++++++++++++++++
+
+router.get('/', (req, res) => {
+    Journal.find({})
+        .then((journals) => {
+            res.render("journals/Index", { journals })
+        })
+        .catch((error) => {
+            res.status(400).json({ error })
+        })
+})
 
 //NEW++++++++++++++++++++
 
