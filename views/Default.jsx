@@ -19,7 +19,7 @@ class DefaultLayout extends React.Component {
                         crossOrigin="anonymous"
                     ></script>
                 </head>
-                <body>
+                {/* <body>
                     <div id="main">
                         <div>
                             <header class="header style">
@@ -40,7 +40,7 @@ class DefaultLayout extends React.Component {
                             </header>
                         </div>
                     </div>
-                </body>
+                </body> */}
 
             </html>
         )
