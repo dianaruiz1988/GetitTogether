@@ -11,7 +11,6 @@ class Index extends React.Component {
                             <div class="Header Logo wrap">
                                 <a class="Header Logo" href="">Get it Together</a>
                             </div>
-
                             <div class="Header Menu">
                                 <div class="Container">
                                     <div class="Header Wrap">
@@ -23,9 +22,22 @@ class Index extends React.Component {
                                 </div>
                             </div>
                         </header>
+
+                        <main class=" Main style">
+                        {
+                        journals.map((journal) => (
+                            <article>
+                                <a href={`/journals/${journal._id}`}>
+                                    <h2>
+                                        {journal.name} - {journal.title}
+                                    </h2>
+                                </a>
+                            </article>
+                        ))
+                    }
+                        </main>
                     </div>
                 </div>
-
         )
     }
 }
