@@ -49,13 +49,15 @@ class Show extends React.Component {
                                 {journal.getFreshAir ? '✔️ Got some Fresh Air!' : '✖️ Did not get Fresh Air'}<br />
                                 {journal.drinkWater ? '✔️ Drank Water' : ' ✖️ Need to Drink some Water'}<br />
                         </div>
-                            <ul class="footer">
+                        <nav class="footer">
+                            <ul>
                             <li><a href={`/journals/${journal._id}/Edit`}><button>Edit</button></a></li>
                             <form action={`/journals/${journal._id}?_method=DELETE`} method="POST">
                                 <li><input type="submit" value="Delete" /></li>
                             </form>
                             <li><a href="/journals/"><button>Back to Main</button></a></li>
                         </ul>
+                        </nav>
                     </div>
                 </body>
             </html>
