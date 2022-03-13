@@ -2,10 +2,9 @@ const React = require('react');
 
 class Index extends React.Component {
     render() {
-        <link rel="stylesheet" href="/css/base.css" />
         const { journals } = this.props;
         return (
-          
+            <html lang="en">
                 <div id="main">
                     <div>
                         <header class="header style">
@@ -39,6 +38,7 @@ class Index extends React.Component {
                         </main>
                     </div>
                 </div>
+                </html>
         )
     }
 }

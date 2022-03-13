@@ -75,7 +75,7 @@ router.delete ('/:id',(req,res) => {
             res.redirect('/journals')
         })
         .catch((error) => {
-            res.status(400).json({error});
+            res.status(400).json({ error });
         })
 })
 //UPDATE+++++++++++++++++++++++++++++++++++++++++++++++++
@@ -92,7 +92,7 @@ router.put('/:id', (req, res) => {
             res.redirect(`/journals/${id}`)
         })
         .catch((error) => {
-            res.status(400).json({error})
+            res.status(400).json({ error })
         })
 })
 //CREATE++++++++++++++++++++++++++++++++++++++++++++++++
@@ -108,12 +108,32 @@ router.post('/', (req, res) => {
             res.redirect(`/journals/${createdJournal._id}`)
         })
         .catch((error) => {
-            res.status(400).json({error})
+            res.status(400).json({ error })
         })
 })
 //EDIT+++++++++++++++++++++++++++++++++
-router.get('/:id/edit')
+router.get('/:id/edit', (req, res) => {
+    const { id } = req.params
+    Journal.findById(id)
+        .then((journal) => {
+            res.render('journals/Edit', { journal })
+    })
+    .catch((error) => {
+        res.status(400).json({ error })
+    })
+})
 
 //SHOW+++++++++++++++++++++++++++++
+router.get('/:id', (req, res) => {
+    const { id } = req.params;
+
+    Journal.findById(id)
+        .then((journal) => {
+            res.render('journals/Show', { journal })
+        })
+        .catch((error) => {
+            res.status(400).json({ error })
+        })
+})
 
 module.exports = router;
