@@ -82,7 +82,7 @@ small {
   }
 
   li {
-      display:inline-flex
+      display:inline;
   }
 @media (max-width: 500px) {
     h1 {
