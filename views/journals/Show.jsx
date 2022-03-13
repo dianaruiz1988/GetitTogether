@@ -1,5 +1,4 @@
 const React = require('react');
-import { Helmet } from 'react-helmet';
 
 class Show extends React.Component {
     render() {
