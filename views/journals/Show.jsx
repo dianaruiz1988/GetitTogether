@@ -46,11 +46,11 @@ class Show extends React.Component {
                         </div>
 
                         <div class="checklist">
-                                {journal.brushTeeth ? 'Brushed teeth' : 'Did not brush teeth 🐷 '}<br />
-                                {journal.washFace ? 'Washed face 🙈' : 'Did not wash face'}<br />
-                                {journal.eatMeal ? 'I got that yummy yummy 🍱' : 'Did not eat - tengo hambre'}<br />
-                                {journal.getFreshAir ? 'Got some Fresh Air!' : 'Did not get Fresh Air 🧛‍♀️'}<br />
-                                {journal.drinkWater ? 'Drank Water' : ' OH OH Time to Drink some Water 😨'}<br />
+                                {journal.brushTeeth ? '✔️ Brushed teeth' : 'Did not brush teeth'}<br />
+                                {journal.washFace ? '✔️ Washed face' : 'Did not wash face'}<br />
+                                {journal.eatMeal ? '✔️ Ate' : 'Did not eat - tengo hambre'}<br />
+                                {journal.getFreshAir ? '✔️ Got some Fresh Air!' : 'Did not get Fresh Air'}<br />
+                                {journal.drinkWater ? '✔️ Drank Water' : ' Need to Drink some Water'}<br />
                         </div>
                             <ul>
                             <li><a href={`/journals/${journal._id}/Edit`}><button>Edit</button></a></li>
