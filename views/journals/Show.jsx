@@ -24,6 +24,7 @@ class Show extends React.Component {
                         <div class="grateful">
                             <p>I am Grateful for <span class="gratitude">Click on Image to View</span><br />
                                 <small>{journal.grateful}</small></p>
+                                {onclick = this.className ='show-description small'}
                         </div>
 
                         <div class="affirmations">
