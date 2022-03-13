@@ -44,13 +44,13 @@ class Show extends React.Component {
                 </div>
 
                 <div class= "checklist">
-                    <h2>
-                    {journal.brushTeeth ? 'Brushed teeth' : 'Did not brush teeth 🐷 '}
-                    {journal.washFace ? 'Washed face 🙈' : 'Did not wash face'}
-                    {journal.eatMeal ? 'I got that yummy yummy 🍱' : 'Did not eat - tengo hambre'}
-                    {journal.getFreshAir ? 'Got some Fresh Air!' : 'Did not get Fresh Air 🧛‍♀️'}
-                    {journal.drinkWater ? 'Drank Water' : ' OH OH Time to Drink some Water 😨'}
-                    </h2>
+                    <p>
+                    {journal.brushTeeth ? 'Brushed teeth' : 'Did not brush teeth 🐷 '}<br />
+                    {journal.washFace ? 'Washed face 🙈' : 'Did not wash face'}<br />
+                    {journal.eatMeal ? 'I got that yummy yummy 🍱' : 'Did not eat - tengo hambre'}<br />
+                    {journal.getFreshAir ? 'Got some Fresh Air!' : 'Did not get Fresh Air 🧛‍♀️'}<br />
+                    {journal.drinkWater ? 'Drank Water' : ' OH OH Time to Drink some Water 😨'}<br />
+                    </p>
                 </div>
 
 

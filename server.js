@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
-const journalController = require('./controllers/journals')
+const journalController = require('./controllers/main')
 const path = require('path');
 
 const app = express();
@@ -28,7 +28,7 @@ app.use(express.static("public"));
 //     res.send("will this be the home page");
 // })
 
-app.use('/journals', journalController)
+app.use('/main', mainController)
 app.get('/', (req, res) => {
     res.send("will this be the home page");
 })
