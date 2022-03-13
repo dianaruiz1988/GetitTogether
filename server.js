@@ -28,7 +28,7 @@ app.use(express.static("public"));
 //     res.send("will this be the home page");
 // })
 
-app.use('/main', journalController)
+app.use('/', journalController)
 app.get('/', (req, res) => {
     res.send("will this be the home page");
 })
