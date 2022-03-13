@@ -26,6 +26,7 @@ class Show extends React.Component {
                         <div class="grateful">
                             <p>I am Grateful for <span class="gratitude">Click on Image to View</span><br />
                                 <small>{journal.grateful}</small></p>
+                             {$(this).toggleClass('show-description')});
                         </div>
 
                         <div class="affirmations">
@@ -58,8 +59,6 @@ class Show extends React.Component {
                             <li><a href="/journals/"><button>Back to Main</button></a></li>
                         </nav>
                     </div>
-                    <script>$('div').on('click', function() {$(this).toggleClass('show-description')});
-                    </script>
                 </body>
             </html>
         )
