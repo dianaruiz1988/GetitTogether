@@ -27,17 +27,17 @@ class Show extends React.Component {
                         </div>
 
                         <div class="affirmations">
-                            <p>Affirm it into Existence <span class="affirmed"> Click on Image to View Entry</span><br />
+                            <p>Affirmations <span class="affirmed"> Click on Image to View Entry</span><br />
                                 <small>{journal.affirmations}</small></p>
                         </div>
 
                         <div class="today">
-                            <p>{journal.title} <span class="hoy">{journal.date} - Click on Image to View</span><br />
+                            <p>Journal Entry for Today<span class="hoy">{journal.date} - Click on Image to View</span><br />
                                 <small>{journal.today}</small></p>
                         </div>
 
                         <div class="tomorrow">
-                            <p>Wishes<span class="mañana">Click on Image to View Entry</span><br />
+                            <p>Wishes for Tomorrow<span class="mañana">Click on Image to View Entry</span><br />
                                 <small>{journal.tomorrow}</small></p>
                         </div>
 
