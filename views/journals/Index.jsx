@@ -1,5 +1,4 @@
 const React = require('react');
-import '/scss/base.scss';
 
 
 class Index extends React.Component {
