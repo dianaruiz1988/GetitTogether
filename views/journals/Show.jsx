@@ -54,17 +54,17 @@ class Show extends React.Component {
                                 {journal.drinkWater ? 'Drank Water' : ' OH OH Time to Drink some Water 😨'}<br />
                             </p>
                         </div>
-
-
-
-                        <footer>
-                            <a href={`/journals/${journal._id}/Edit`}><button>Edit</button></a>
+                            <ul>
+                            <li><a href={`/journals/${journal._id}/Edit`}><button>Edit</button></a></li>
                             <form action={`/journals/${journal._id}?_method=DELETE`} method="POST">
-                                <input type="submit" value="Delete" />
+                                <li><input type="submit" value="Delete" /></li>
                             </form>
-                            <a href="/journals/"><button>Back to Main</button></a>
-                        </footer>
+                            <li><a href="/journals/"><button>Back to Main</button></a></li>
+                        </ul>
                     </div>
+                    <script>
+                    {$('div').on('click', function() {$(this).toggleClass('show-description');})}
+                    </script>
                 </body>
             </html>
         )

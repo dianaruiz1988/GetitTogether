@@ -72,6 +72,14 @@ small {
     color: #bbbbbb;
     background:#ffffff26;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    background-color:#ffffff26;
+  }
 @media (max-width: 500px) {
     h1 {
       font-size: 50px;
@@ -93,4 +101,5 @@ small {
       font-size: 16px;
     }
   }
-  
+
+ 
