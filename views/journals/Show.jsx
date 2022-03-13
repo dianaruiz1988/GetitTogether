@@ -17,12 +17,10 @@ class Show extends React.Component {
                     <div id="main">
 
                         <div class="name">
-                            <article>
                                 <h2>
                                     {journal.date} -
                                     {journal.title}
                                 </h2>
-                            </article>
                         </div>
 
                         <div class="grateful">
