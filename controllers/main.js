@@ -10,7 +10,7 @@ const router = express.Router();
 //ROUTES:===========================================================================================================================
 
 //SEED++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-router.get('/seed', (req, res) => {
+router.get('/journals/seed', (req, res) => {
     const startJournals = [
         {
             date: "3/11/22",
@@ -52,7 +52,7 @@ router.get('/seed', (req, res) => {
 
 //INDEX+++++++++++++++++++++++
 
-router.get('/', (req, res) => {
+router.get('/journals', (req, res) => {
     Journal.find({})
         .then((journals) => {
             res.render("journals/Index", { journals })
@@ -63,7 +63,7 @@ router.get('/', (req, res) => {
 })
 
 //NEW++++++++++++++++++++
-router.get('/new', (req, res) => {
+router.get('/journals/new', (req, res) => {
     res.render('journals/New')
 })
 
@@ -79,7 +79,7 @@ router.delete ('/:id',(req,res) => {
         })
 })
 //UPDATE+++++++++++++++++++++++++++++++++++++++++++++++++
-router.put('/:id', (req, res) => {
+router.put('/journals/:id', (req, res) => {
     const id = req.params.id;
     req.body.brushTeeth = req.body.brushTeeth === 'on' ? true : false;
     req.body.washFace = req.body.washFace === 'on' ? true : false;
@@ -96,7 +96,7 @@ router.put('/:id', (req, res) => {
         })
 })
 //CREATE++++++++++++++++++++++++++++++++++++++++++++++++
-router.post('/', (req, res) => {
+router.post('/journals', (req, res) => {
     req.body.brushTeeth = req.body.brushTeeth === 'on' ? true : false;
     req.body.washFace = req.body.washFace === 'on' ? true : false;
     req.body.eatMeal = req.body.eatMeal === 'on' ? true : false;
@@ -112,7 +112,7 @@ router.post('/', (req, res) => {
         })
 })
 //EDIT+++++++++++++++++++++++++++++++++
-router.get('/:id/edit', (req, res) => {
+router.get('/journals/:id/edit', (req, res) => {
     const { id } = req.params
     Journal.findById(id)
         .then((journal) => {
@@ -124,7 +124,7 @@ router.get('/:id/edit', (req, res) => {
 })
 
 //SHOW+++++++++++++++++++++++++++++
-router.get('/:id', (req, res) => {
+router.get('/journals/:id', (req, res) => {
     const { id } = req.params;
 
     Journal.findById(id)
@@ -135,5 +135,16 @@ router.get('/:id', (req, res) => {
             res.status(400).json({ error })
         })
 })
+
+
+
+
+
+
+
+
+
+
+
 
 module.exports = router;
