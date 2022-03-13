@@ -83,13 +83,11 @@ small {
     background-color:#ffffff26;
   }
 
-  li {
-      display:inline;
-  }
+ .click {
+     float: right;
+ }
 
-  button {
-      display: inline;
-  }
+
 @media (max-width: 500px) {
     h1 {
       font-size: 50px;
@@ -104,8 +102,8 @@ small {
       margin: 20px 12px 0 12px;
     }
     p {
-      font-size: 20px;
-      line-height: 24px;
+      font-size: 10px;
+      line-height: 20px;
     }
     small {
       font-size: 16px;
