@@ -3,6 +3,7 @@
 const express = require('express');
 const res = require('express/lib/response');
 const Journal = require("../models/journal");
+import '/scss/base.scss';
 
 // CREATE ROUTER====================================================================================================================
 const router = express.Router();

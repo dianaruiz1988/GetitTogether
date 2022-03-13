@@ -1,10 +1,16 @@
 const React = require('react');
+import '/scss/base.scss';
+
 
 class Index extends React.Component {
     render() {
         const { journals } = this.props;
         return (
             <html lang="en">
+                 <head>
+                <title>Journal Home Page</title>
+                <link rel="stylesheet" href="/scss/base.scss" />
+            </head>
                 <div id="main">
                     <div>
                         <header class="header style">
