@@ -25,7 +25,7 @@ h2 {
 }
 p {
     color: #bbbbbb;
-    background:#ffffff26;
+    background:#146d7c26;
     background: linear-gradient(bottom,rgba(0,0,0,1), rgba(0,0,0,.4));
     background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
     background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
@@ -53,14 +53,13 @@ small {
 }
 
 .grateful {
-    background-image: url("https://i.pinimg.com/originals/7d/f6/8d/7df68d442158554de9b26fe084c6ce57.jpg");
-    background-image:inherit
+    background-image: url("https://i.pinimg.com/originals/2d/7b/7d/2d7b7d30f2affd7800fcb50fdd2ae08d.jpg");
   
 }
 
 .affirmations {
     background-image: url("https://i.pinimg.com/originals/d9/ab/2a/d9ab2a3ec20bb38fe1aaedcfbdcdd832.jpg");
-    
+    background-size: fit;
 }
 
 .today {
