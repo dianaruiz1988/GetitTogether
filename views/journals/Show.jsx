@@ -22,22 +22,22 @@ class Show extends React.Component {
                        
 
                         <div class="grateful">
-                            <p>I am Grateful for <span class="click">  -  Click on Image to View</span><br />
+                            <p>I am Grateful for  <span class="click">  -  Click on Image to View</span><br />
                                 <small>{journal.grateful}</small></p>
                         </div>
 
                         <div class="affirmations">
-                            <p>Affirmations <span class="click">  -   Click on Image to View Entry</span><br />
+                            <p>Affirmations  <span class="click">  -   Click on Image to View Entry</span><br />
                                 <small>{journal.affirmations}</small></p>
                         </div>
 
                         <div class="today">
-                            <p>Journal Entry for Today<span class="click">  -  Click on Image to View</span><br />
+                            <p>Journal Entry for Today  <span class="click">  -  Click on Image to View</span><br />
                                 <small>{journal.today}</small></p>
                         </div>
 
                         <div class="tomorrow">
-                            <p>Wishes for Tomorrow<span class="click">  -  Click on Image to View Entry</span><br />
+                            <p>Wishes for Tomorrow  <span class="click">  -  Click on Image to View Entry</span><br />
                                 <small>{journal.tomorrow}</small></p>
                         </div>
 
