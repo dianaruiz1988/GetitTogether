@@ -15,11 +15,11 @@ class Edit extends React.Component {
                         TODAY: <br /><textarea name="today" type="textarea" defaultValue={journal.today} /><br />
                         TOMORROW: <br /><textarea name="tomorrow" type="textarea"  defaultValue={journal.tomorrow} /><br />
 
-                        BRUSH TEETH: {this.props.journal.brushTeeth? <input name="brushTeeth" type="checkbox" defaultChecked /> : <input type="checkbox" name= "brushTeeth" />}
-                        WASH FACE: {this.props.journal.washFace? <input name="washFace" type="checkbox" defaultChecked /> : <input type="checkbox" name= "washFace" />}
-                        EAT MEAL: {this.props.journal.eatMeal? <input name="eatMeal" type="checkbox" defaultChecked /> : <input type="checkbox" name= "eatMeal" />}
-                        GET FRESH AIR: {this.props.journal.getFreshAir? <input name="getFreshAir" type="checkbox" defaultChecked /> : <input type="checkbox" name= "getFreshAir" />}
-                        DRINK WATER: {this.props.journal.drinkWater? <input name="drinkWater" type="checkbox" defaultChecked /> : <input type="checkbox" name= "eatMeal" />}
+                        BRUSH TEETH: {this.props.journal.brushTeeth? <input name="brushTeeth" type="checkbox" defaultChecked /> : <><input type="checkbox" name="brushTeeth" /><br /></>}
+                        WASH FACE: {this.props.journal.washFace? <input name="washFace" type="checkbox" defaultChecked /> : <><input type="checkbox" name="washFace" /><br /></>}
+                        EAT MEAL: {this.props.journal.eatMeal? <input name="eatMeal" type="checkbox" defaultChecked /> : <><input type="checkbox" name="eatMeal" /><br /></>}
+                        GET FRESH AIR: {this.props.journal.getFreshAir? <input name="getFreshAir" type="checkbox" defaultChecked /> : <><input type="checkbox" name="getFreshAir" /><br /></>}
+                        DRINK WATER: {this.props.journal.drinkWater? <input name="drinkWater" type="checkbox" defaultChecked /> : <><input type="checkbox" name="eatMeal" /><br /></>}
                     
                       
 
