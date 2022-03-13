@@ -57,6 +57,9 @@ class Show extends React.Component {
                             <li><a href="/journals/"><button>Back to Main</button></a></li>
                         </nav>
                     </div>
+                    
+                {$('div').on('click', function() {$(this).toggleClass('show-description');})}
+
                 </body>
             </html>
         )

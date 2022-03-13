@@ -53,19 +53,19 @@ small {
 }
 
 .grateful {
-    background-image: url("https://i.pinimg.com/originals/44/b3/0f/44b30f50449a4511ecf5451b9dc15cc2.jpg");
+    background-image: transparent;
 }
 
 .affirmations {
-    background-image: url("https://i.pinimg.com/564x/7e/11/52/7e1152fd357568118571ae1b34e30a86.jpg");
+    background-image: transparent,
 }
 
 .today {
-    background-image: url("https://i.pinimg.com/564x/7e/11/52/7e1152fd357568118571ae1b34e30a86.jpg");
+    background-image: transparent;
 }
 
 .tomorrow {
-    background-image: url("https://i.pinimg.com/564x/7e/11/52/7e1152fd357568118571ae1b34e30a86.jpg");
+    background-image: transparent;
 }
 
 .checklist{
