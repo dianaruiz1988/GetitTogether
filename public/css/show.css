@@ -54,6 +54,7 @@ small {
 
 .grateful {
     background-image: url("https://i.pinimg.com/originals/7d/f6/8d/7df68d442158554de9b26fe084c6ce57.jpg");
+    background-image:inherit
   
 }
 
@@ -63,11 +64,11 @@ small {
 }
 
 .today {
-    background-image: url("https://positiveupwardspiral.tumblr.com/image/184549711550");
+    background-image: url("https://i.pinimg.com/736x/68/6e/42/686e4245fa0259d85780dc301daa769a.jpg");
 }
 
 .tomorrow {
-    background-image: url("https://positiveupwardspiral.tumblr.com/image/184549711550");
+    background-image: url("https://i.pinimg.com/originals/54/19/32/5419323a628faf17c1b464ba1c7fad14.jpg");
 }
 
 .checklist{
