@@ -3,7 +3,6 @@
 const express = require('express');
 const res = require('express/lib/response');
 const Journal = require("../models/journal");
-import '/scss/base.scss';
 
 // CREATE ROUTER====================================================================================================================
 const router = express.Router();
@@ -136,16 +135,6 @@ router.get('/journals/:id', (req, res) => {
             res.status(400).json({ error })
         })
 })
-
-
-
-
-
-
-
-
-
-
 
 
 module.exports = router;
