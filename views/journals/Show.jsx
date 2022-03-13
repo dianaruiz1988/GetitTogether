@@ -16,12 +16,11 @@ class Show extends React.Component {
 
                     <div id="main">
 
-                        <div class="name">
-                                <h2>
+                        <h2 class="name">
                                     {journal.date} -
                                     {journal.title}
                                 </h2>
-                        </div>
+                       
 
                         <div class="grateful">
                             <p>I am Grateful for <span class="gratitude">Click on Image to View</span><br />
