@@ -68,7 +68,7 @@ router.get('/journals/new', (req, res) => {
 })
 
 //DELETE++++++++++++++++++++
-router.delete ('/:id',(req,res) => {
+router.delete ('/journals/:id',(req,res) => {
     const {id} = req.params;
     Journal.findByIdAndDelete(id)
         .then(() => {
