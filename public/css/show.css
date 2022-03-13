@@ -80,6 +80,10 @@ small {
     display: inline;
     background-color:#ffffff26;
   }
+
+  li {
+      display:inline-flex
+  }
 @media (max-width: 500px) {
     h1 {
       font-size: 50px;
