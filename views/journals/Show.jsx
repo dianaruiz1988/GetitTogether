@@ -7,7 +7,7 @@ class Show extends React.Component {
             <html lang="en">
             <head>
                 <title>Journal Entry</title>
-                <link rel="stylesheet" href="/css/style.css" />
+                <link rel="stylesheet" href="/scss/base.scss" />
             </head>
             <body>
             <h1> Journal Entry</h1>
