@@ -8,6 +8,7 @@ class Show extends React.Component {
                 <head>
                     <title>Journal Entry</title>
                     <link rel="stylesheet" href="/css/show.css" />
+                    <script src="/assets/jquery.js"></script>
                     <link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'></link>
                 </head>
                 <body>
