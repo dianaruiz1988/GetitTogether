@@ -14,7 +14,7 @@ class Index extends React.Component {
                     <div>
                         <header class="header style">
                             <div class="Header Logo wrap">
-                                <a class="Header Logo" href="">Get it Together</a>
+                                <a class="Header Logo" href="">Get it Together Home Page</a>
                             </div>
                             <div class="Header Menu">
                                 <div class="Container">

@@ -1,4 +1,5 @@
 const React = require('react');
+import { Helmet } from 'react-helmet';
 
 class Show extends React.Component {
     render() {
@@ -8,6 +9,7 @@ class Show extends React.Component {
                 <head>
                     <title>Journal Entry</title>
                     <link rel="stylesheet" href="/css/show.css" />
+                    <script src="/assets/jquery.js"></script>
                     <link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'></link>
                 </head>
                 <body>
@@ -56,7 +58,8 @@ class Show extends React.Component {
                             <li><a href="/journals/"><button>Back to Main</button></a></li>
                         </nav>
                     </div>
-
+                    <script>$('div').on('click', function() {$(this).toggleClass('show-description')});
+                    </script>
                 </body>
             </html>
         )
