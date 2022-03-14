@@ -19,10 +19,10 @@ class New extends React.Component {
                     </ul>
                 </nav>
                 <h1> Create a New Journal Entry</h1>
-                <div class="text-center">
+                <div class="row">
                     <img class="img-fluid" src="https://i.pinimg.com/originals/90/f5/78/90f5783966ddbfb8d4bc88e097368164.jpg" />
                 </div>
-                <div class="text-center">
+                <div class="row">
                     <div>
                         <form action="/journals" method="post">
                             <fieldset>
