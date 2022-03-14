@@ -20,7 +20,7 @@ class New extends React.Component {
                 <div class="text-center">
                     <img class="img-fluid" src="img/asset_holder.jpeg" />
                 </div>
-                <div class="container">
+                <div class="form-group">
                     <div>
                         <form action="/journals" method="post">
                             <fieldset>
