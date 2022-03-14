@@ -3,6 +3,7 @@
 const express = require('express');
 const res = require('express/lib/response');
 const Journal = require("../models/journal");
+const Goal = require("../models/goal");
 
 // CREATE ROUTER====================================================================================================================
 const router = express.Router();
@@ -10,6 +11,7 @@ const router = express.Router();
 //ROUTES:===========================================================================================================================
 
 //SEED++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Journal Seed---------------------------------------------------------------------
 router.get('/journals/seed', (req, res) => {
     const startJournals = [
         {
@@ -48,10 +50,35 @@ router.get('/journals/seed', (req, res) => {
     })
 })
 
+// Goal Seed---------------------------------------------------------------------
+router.get('/goals/seed', (req, res) => {
+    const startGoals = [
+        {
+            goal: "Get Quality Sleep",
+            date: "3/11/22",
+            deadline: "unrealistic",
+            achieved: false,
+        },
+
+        {
+            goal: "Take Zeke to the park more",
+            date: "3/11/22",
+            deadline: "3/16/22",
+            achieved: true,
+        },
+    ];
+    Goal.deleteMany({}).then((data) => {
+        Goal.create(startGoals).then((data) => {
+            res.json(data);
+        })
+    }).catch((err) => {
+        res.status(400).send(err)
+    })
+})
+
 //INDUCES===========================================================================
 
-//INDEX+++++++++++++++++++++++
-
+//INDEX+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 router.get('/journals', (req, res) => {
     Journal.find({})
         .then((journals) => {
@@ -62,12 +89,29 @@ router.get('/journals', (req, res) => {
         })
 })
 
-//NEW++++++++++++++++++++
+// Goal Index------------------------------------------------------------------------
+router.get('/goals', (req, res) => {
+    Goal.find({})
+        .then((goals) => {
+            res.render("goals/Index", { goals })
+        })
+        .catch((error) => {
+            res.status(400).json({ error })
+        })
+})
+
+//NEW++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 router.get('/journals/new', (req, res) => {
     res.render('journals/New')
 })
 
-//DELETE++++++++++++++++++++
+// Goal New--------------------------------------------------------------------------
+router.get('/goals/new', (req, res) => {
+    res.render('goals/New')
+})
+
+
+//DELETE+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 router.delete ('/journals/:id',(req,res) => {
     const {id} = req.params;
     Journal.findByIdAndDelete(id)
@@ -78,7 +122,21 @@ router.delete ('/journals/:id',(req,res) => {
             res.status(400).json({ error });
         })
 })
-//UPDATE+++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Goal Delete--------------------------------------------------------------------------
+router.delete ('/goals/:id',(req,res) => {
+    const {id} = req.params;
+    Goal.findByIdAndDelete(id)
+        .then(() => {
+            res.redirect('/goals')
+        })
+        .catch((error) => {
+            res.status(400).json({ error });
+        })
+})
+
+
+//UPDATE++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 router.put('/journals/:id', (req, res) => {
     const id = req.params.id;
     req.body.brushTeeth = req.body.brushTeeth === 'on' ? true : false;
@@ -95,7 +153,22 @@ router.put('/journals/:id', (req, res) => {
             res.status(400).json({ error })
         })
 })
-//CREATE++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Goal Update--------------------------------------------------------------------------
+router.put('/goals/:id', (req, res) => {
+    const id = req.params.id;
+    req.body.achieved = req.body.achieved === 'on' ? true : false;
+
+    Goal.findByIdAndUpdate(id, req.body, { new: true})
+        .then(() => {
+            res.redirect(`/goals/${id}`)
+        })
+        .catch((error) => {
+            res.status(400).json({ error })
+        })
+})
+
+//CREATE+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 router.post('/journals', (req, res) => {
     req.body.brushTeeth = req.body.brushTeeth === 'on' ? true : false;
     req.body.washFace = req.body.washFace === 'on' ? true : false;
@@ -111,7 +184,23 @@ router.post('/journals', (req, res) => {
             res.status(400).json({ error })
         })
 })
-//EDIT+++++++++++++++++++++++++++++++++
+
+// Goal Create--------------------------------------------------------------------------
+router.post('/goals', (req, res) => {
+    req.body.achieved = req.body.achieved === 'on' ? true : false;
+  
+
+    Goal.create(req.body)
+        .then((createdGoal) => {
+            res.redirect(`/goals/${createdGoal._id}`)
+        })
+        .catch((error) => {
+            res.status(400).json({ error })
+        })
+})
+
+
+//EDIT+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 router.get('/journals/:id/edit', (req, res) => {
     const { id } = req.params
     Journal.findById(id)
@@ -123,13 +212,38 @@ router.get('/journals/:id/edit', (req, res) => {
     })
 })
 
-//SHOW+++++++++++++++++++++++++++++
+// Goal Create--------------------------------------------------------------------------
+router.get('/goals/:id/edit', (req, res) => {
+    const { id } = req.params
+    Goal.findById(id)
+        .then((goal) => {
+            res.render('goals/Edit', { goal })
+    })
+    .catch((error) => {
+        res.status(400).json({ error })
+    })
+})
+
+//SHOW++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 router.get('/journals/:id', (req, res) => {
     const { id } = req.params;
 
     Journal.findById(id)
         .then((journal) => {
             res.render('journals/Show', { journal })
+        })
+        .catch((error) => {
+            res.status(400).json({ error })
+        })
+})
+
+// Goal Show----------------------------------------------------------------------------
+router.get('/goals/:id', (req, res) => {
+    const { id } = req.params;
+
+    Goal.findById(id)
+        .then((goal) => {
+            res.render('goals/Show', { goal })
         })
         .catch((error) => {
             res.status(400).json({ error })
