@@ -19,12 +19,13 @@ class New extends React.Component {
                     </ul>
                 </nav>
                 <div class="text-center">
-                    <img class="img-fluid" src="img/asset_holder.jpeg" />
+                    <img class="img-fluid" src="https://i.pinimg.com/originals/90/f5/78/90f5783966ddbfb8d4bc88e097368164.jpg" />
                 </div>
                 <div class="text-center">
                     <div>
                         <form action="/journals" method="post">
                             <fieldset>
+                            <h1> Create a New Journal Entry</h1>
                                 <legend>Create a New Journal Entry</legend>
                         
                                 DATE: <input name="date"  type="text"  placeholder="enter date like this month/day/year" /><br />
