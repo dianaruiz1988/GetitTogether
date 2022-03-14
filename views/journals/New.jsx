@@ -18,6 +18,7 @@ class New extends React.Component {
                         <li class="nav-item"><a class="nav-link" href="#">GOALS HOME PAGE</a></li>
                     </ul>
                 </nav>
+                <h1> Create a New Journal Entry</h1>
                 <div class="text-center">
                     <img class="img-fluid" src="https://i.pinimg.com/originals/90/f5/78/90f5783966ddbfb8d4bc88e097368164.jpg" />
                 </div>
@@ -25,8 +26,6 @@ class New extends React.Component {
                     <div>
                         <form action="/journals" method="post">
                             <fieldset>
-                            <h1> Create a New Journal Entry</h1>
-                                <legend>Create a New Journal Entry</legend>
                         
                                 DATE: <input name="date"  type="text"  placeholder="enter date like this month/day/year" /><br />
                                 TITLE: <input name="title"  type="text"  placeholder="enter a title for your journal entry" /><br />
