@@ -8,7 +8,6 @@ class Index extends React.Component {
             <html lang="en">
                  <head>
                 <title>Journal Home Page</title>
-                <link rel="stylesheet" href="/scss/base.scss" />
             </head>
                 <div id="main">
                     <div>

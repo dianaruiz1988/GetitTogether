@@ -20,10 +20,6 @@ class Edit extends React.Component {
                         EAT MEAL: {this.props.journal.eatMeal? <input name="eatMeal" type="checkbox" defaultChecked /> : <><input type="checkbox" name="eatMeal" /><br /></>}
                         GET FRESH AIR: {this.props.journal.getFreshAir? <input name="getFreshAir" type="checkbox" defaultChecked /> : <><input type="checkbox" name="getFreshAir" /><br /></>}
                         DRINK WATER: {this.props.journal.drinkWater? <input name="drinkWater" type="checkbox" defaultChecked /> : <><input type="checkbox" name="eatMeal" /><br /></>}
-                    
-                      
-
-                    
                     </fieldset>
                     <input type="submit" value={`Edit ${journal.date}`} />
                 </form>
