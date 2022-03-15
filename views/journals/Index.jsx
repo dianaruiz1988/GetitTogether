@@ -16,7 +16,6 @@ class Index extends React.Component {
             <nav>
                     <ul class="nav nav-tabs">
                         <li class="nav-item"><a class="nav-link" href="/">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/journals">JOURNALS HOME PAGE</a></li>
                         <li class="nav-item"><a class="nav-link" href="/goals">GOALS HOME PAGE</a></li>
                     </ul>
                 </nav>
@@ -25,7 +24,6 @@ class Index extends React.Component {
                     <div>
                         <header class="header style">
                             <div class="Header Logo wrap">
-                                <a class="Header Logo" href="">Get it Together Home Page</a>
                             </div>
                             <div class="Header Menu">
                                 <div class="Container">
