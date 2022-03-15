@@ -4,6 +4,21 @@ class Edit extends React.Component {
     render() {
         const { journal } = this.props;
         return (
+            <html lang="en">
+                <head>
+                    <title>Journal Entry</title>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+                        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"></link>
+                         <link rel="stylesheet" href="/css/show.css" />
+                         <link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'></link>
+                </head>
+                <nav>
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item"><a class="nav-link" href="/">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/journals">JOURNALS HOME PAGE</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/goals">GOALS HOME PAGE</a></li>
+                    </ul>
+                </nav>
                   <form action={`/journals/${journal._id}?_method=PUT`} method="post">
                     <fieldset>
                         <legend>Edit this Journal Entry</legend>
@@ -23,6 +38,8 @@ class Edit extends React.Component {
                     </fieldset>
                     <input type="submit" value={`Edit ${journal.date}`} />
                 </form>
+                
+                </html>
         )
     }
 }

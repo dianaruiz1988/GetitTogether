@@ -13,9 +13,9 @@ class New extends React.Component {
                 </head> 
                 <nav>
                     <ul class="nav nav-tabs">
-                        <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">JOURNALS HOME PAGE</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">GOALS HOME PAGE</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/journals">JOURNALS HOME PAGE</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/goals">GOALS HOME PAGE</a></li>
                     </ul>
                 </nav>
                 <h1> Create a New Journal Entry</h1>
