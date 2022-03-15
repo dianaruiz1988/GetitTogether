@@ -30,7 +30,7 @@ app.use(express.static("public"));
 
 app.use('/', mainController)
 app.get('/', (req, res) => {
-    res.send("will this be the home page");
+    res.send("home page");
 })
 
 //SERVER LISTENER
