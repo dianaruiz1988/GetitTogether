@@ -8,9 +8,9 @@ class Edit extends React.Component {
                     <fieldset>
                         <legend>Edit this Goal</legend>
                         
-                        DATE: <input name="date"  type="text"  placeholder="enter date like this month/day/year" defaultValue={goal.date} /><br />
-                        GOAL: <input name="title"  type="text"  placeholder="enter a title for your goal entry" defaultValue={goal.title} /><br />
-                        DEADLINE: <br /><textarea name="grateful" type="textarea" defaultValue={goal.grateful} /><br />
+                        DATE SET: <input name="date"  type="text"  placeholder="enter date like this month/day/year" defaultValue={goal.date} /><br />
+                        DEADLINE: <input name="deadline"  type="text"  placeholder="enter your deadline here" defaultValue={goal.deadline} /><br />
+                        GOAL: <br /><textarea name="goal" type="textarea" defaultValue={goal.goall} /><br />
                 
 
                         ACHIEVED: {this.props.goal.achieved? <input name="achieved" type="checkbox" defaultChecked /> : <><input type="checkbox" name="achieved" /><br /></>}

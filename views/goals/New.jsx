@@ -27,9 +27,10 @@ class New extends React.Component {
                         <form action="/goals" method="post">
                             <fieldset>
                         
-                                DATE: <input name="date"  type="text"  placeholder="enter date like this month/day/year" /><br />
-                                GOAL: <textarea name="goal"  type="textarea"  placeholder="enter a title for your journal entry" /><br />
+                                DATE SET: <input name="date"  type="text"  placeholder="enter date like this month/day/year" /><br />
                                 DEADLINE: <br /><textarea name="grateful" type="textarea" /><br />
+                                GOAL: <textarea name="goal"  type="textarea"  placeholder="enter a title for your journal entry" /><br />
+                               
 
                                 ACHIEVED?:<input name="achievd" type="checkbox" /><br />
                             </fieldset>

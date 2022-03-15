@@ -20,7 +20,7 @@ class Show extends React.Component {
                         </div>
 
                         <div class="goal">
-                            <p>The deadline I plan to achieve this goal is : {goal.deadline}</p>
+                            <p>Deadline : {goal.deadline}</p>
                         </div>
 
                         <div class="checklist">
