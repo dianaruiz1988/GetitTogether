@@ -19,24 +19,8 @@ class Index extends React.Component {
                         <li class="nav-item"><a class="nav-link" href="/goals">GOALS HOME PAGE</a></li>
                     </ul>
                 </nav>
-         
-                <div id="main">
-                    <div>
-                        <header class="header style">
-                            <div class="Header Logo wrap">
-                            </div>
-                            <div class="Header Menu">
-                                <div class="Container">
-                                    <div class="Header Wrap">
-                                        <a href="/journals/new"><button>Create A New Journal Entry</button></a>
-                                        <nav class="navigation">
-                                            <ul class="Header Nav List"></ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div>
-                        </header>
-
+        
+                <div>
                         <main class=" Main style">
                         {
                         journals.map((journal) => (
@@ -51,7 +35,8 @@ class Index extends React.Component {
                     }
                         </main>
                     </div>
-                </div>
+
+                    <a href="/journals/new"><button>Create A New Journal Entry</button></a>
                 </html>
         )
     }
